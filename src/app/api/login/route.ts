@@ -8,7 +8,7 @@ export async function POST(req: Request) {
         if (password === adminPassword) {
             return NextResponse.json({ success: true });
         } else {
-            return NextResponse.json({ success: false, error: 'Ghalat Password!' }, { status: 401 });
+            return NextResponse.json({ success: false, error: 'Wrong Password!' }, { status: 401 });
         }
     } catch (error) {
         return NextResponse.json({ success: false, error: 'Server Error' }, { status: 500 });
